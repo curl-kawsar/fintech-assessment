@@ -88,7 +88,7 @@ The API will be available at:
 http://localhost:8000
 ```
 
-For Postman-style request/response examples, see [API_TESTING.md](API_TESTING.md).
+For Postman-style request/response examples, see [API_TEST.md](API_TEST.md).
 
 ---
 
