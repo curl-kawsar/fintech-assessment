@@ -4,10 +4,11 @@ __pycache__/
 .eggs/
 dist/
 build/
-.env
 venv/
 *.sqlite3
 .pytest_cache/
 .coverage
 htmlcov/
 postgres_data/
+config.bat
+node_modules
