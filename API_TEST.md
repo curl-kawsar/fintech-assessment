@@ -1,7 +1,6 @@
 # API Testing Guide
 
 Manual API testing reference (Postman / Thunder Client).  
-All requests below were executed against a live server on **2026-06-21**.
 
 **Base URL:** `http://127.0.0.1:8000`  
 **Important:** All URLs must end with `/`  
