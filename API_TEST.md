@@ -476,37 +476,3 @@ Idempotency-Key: xfer-same
   "error": "Cannot transfer to the same wallet"
 }
 ```
-
----
-
-## Quick reference
-
-| Test | Method | Path | Auth | Idempotency-Key |
-|------|--------|------|------|-----------------|
-| 1 | POST | `/api/v1/tenants/` | No | No |
-| 2–3 | POST | `/api/v1/wallets/` | Yes | No |
-| 4 | POST | `/api/v1/wallets/{id}/deposit/` | Yes | Yes |
-| 5 | GET | `/api/v1/wallets/{id}/` | Yes | No |
-| 6 | GET | `/api/v1/wallets/{id}/transactions/` | Yes | No |
-| 7–8 | POST | `/api/v1/wallets/{id}/withdraw/` | Yes | Yes |
-| 9 | POST | `/api/v1/transfers/` | Yes | Yes |
-
----
-
-## PDF requirements covered
-
-| Requirement | Test |
-|-------------|------|
-| Insufficient funds | Test 8 |
-| Duplicate idempotency key | Tests 10–11 |
-| Cross-tenant blocked | Test 13 |
-| Deposit / withdraw / transfer | Tests 4, 7, 9 |
-| Balance + history | Tests 5, 6 |
-
----
-
-## Notes
-
-- IDs (`wallet_id`, `transaction_id`) will differ on your machine — follow the flow order.
-- `api_key` is shown only once at tenant creation.
-- Use a **new** `Idempotency-Key` for each new operation; reuse only when retrying the same request.
